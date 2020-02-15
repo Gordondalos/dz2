@@ -28,13 +28,15 @@ case "$item" in
         ;;
     n|N) echo "Ввели «n», завершаем..."
         exit 0
+        rm -r second 
         ;;
     *) echo "Ничего не ввели. Выполняем действие по умолчанию..."
+        rm -r second 
         ;;
 esac
 
 
-rm -r second 
+
 echo "Все успешно удалено!"
 
 $SHELL
